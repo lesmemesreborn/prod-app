@@ -4,10 +4,10 @@ import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 import { Button } from 'shared/ui/Button';
 import { ButtonSize, ButtonTheme } from 'shared/ui/Button/ui/Button';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
-import { t } from 'i18next';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import AboutIcon from 'shared/assets/icons/about-20-20.svg';
 import MainIcon from 'shared/assets/icons/main-20-20.svg';
+import { useTranslation } from 'react-i18next';
 import { classNames } from '../../../../shared/lib/classNames/classNames';
 import cls from './Sidebar.module.scss';
 
@@ -17,6 +17,7 @@ interface SidebarProps {
 
 const Sidebar = ({ className }: SidebarProps) => {
     const [collapsed, setCollapsed] = useState(false);
+    const { t } = useTranslation();
 
     const onToggle = () => {
         setCollapsed((prev) => !prev);
