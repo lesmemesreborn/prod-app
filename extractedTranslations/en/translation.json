@@ -4,6 +4,8 @@
       "": ""
     }
   },
+  "Password": "Password",
+  "Username": "Username",
   "decrement": "decrement",
   "increment": "increment",
   "Войти": "Войти",
